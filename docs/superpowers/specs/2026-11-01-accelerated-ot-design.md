@@ -27,6 +27,7 @@ The steps are independent. Each one gets its own implementation plan.
 | 2 | Rewrite `emd` in Numba | none |
 | 3 | Classical solvers (EMD page, Sinkhorn family) in Numba | step 2 for EMD |
 | 4 | Optional PyTorch GPU backend for Sinkhorn and sliced methods | step 3 |
+| Later | Spherical and other lab methods, scope to be decided | step 1 |
 
 Step 1 calls `ot.emd` through one internal function. Step 2 replaces that
 function, so code built on it does not change.
@@ -84,6 +85,22 @@ API must state this convention explicitly.
 - Invariant tests: marginals, mass constraints, and non-negativity hold.
 - The existing fused PGW port tests carry over, including the `Lambda`
   convention test.
+- Cross-checks: where the problem definitions match, compare against POT's
+  `partial_wasserstein_1d`, partial GW, and partial fused GW solvers.
+
+## Later: spherical and lab methods
+
+Step 1 covers Yikun Bai's own code only. The methods below come from papers with
+other authors or from other lab repos, so they wait for a separate decision.
+Co-authoring a paper does not settle the license of its repo.
+
+| Method | Usable source | Notes |
+|---|---|---|
+| Spherical sliced OT, LCOT, LSSOT | POT (MIT) | The original repos have no license file. |
+| Expected sliced plans | POT 0.9.7 (MIT) | |
+| Stereographic spherical sliced OT | POT 0.9.8dev (MIT) | Not in a PyPI release yet. `mint-vu/s3wd` has no license file. |
+| PAWC, sliced spherical partial OT | `mint-vu/Partial_Wasserstein_on_Circles` (MIT) | Copyright Soheil Kolouri. |
+| PTLp | None found | |
 
 ## Step 2: Numba `emd`
 
