@@ -1,0 +1,11 @@
+sustained burn (fixed total work, ~3 cpu-seconds):
+  t=1 wall 1.36s  speedup 1.00x
+  t=2 wall 0.76s  speedup 1.80x
+  t=4 wall 0.68s  speedup 2.00x
+  t=8 wall 0.68s  speedup 2.00x
+spaced bursts (1s idle before each run):
+  POT serial 0.1106s
+  numba prange t=1 0.1396s  vs POT serial 0.79x
+  numba prange t=2 0.0702s  vs POT serial 1.58x
+  numba prange t=4 0.0357s  vs POT serial 3.10x
+  numba prange t=8 0.0181s  vs POT serial 6.11x

@@ -1,0 +1,12 @@
+POT emd forced to numThreads=1
+mode=orig_pot1 numba_threads=1 (JIT compile excluded)
+LOPT embedding of K measures (targets have mass 0.6..1.0)
+  n=  100 K= 200    0.240 s
+  n=  300 K=  64    1.046 s
+  n= 1000 K=  16    6.337 s
+  result_code_string = check_result(result_code)
+  n= 2000 K=   4    7.372 s
+LOT barycenter, 10 outer iterations
+  n=  100 K=  32    0.207 s
+  n=  300 K=  16    0.909 s
+  n= 1000 K=   8    6.249 s

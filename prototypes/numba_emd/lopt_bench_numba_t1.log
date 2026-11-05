@@ -1,0 +1,10 @@
+mode=numba numba_threads=1 (JIT compile excluded)
+LOPT embedding of K measures (targets have mass 0.6..1.0)
+  n=  100 K= 200    0.290 s
+  n=  300 K=  64    1.545 s
+  n= 1000 K=  16   10.080 s
+  n= 2000 K=   4   19.572 s
+LOT barycenter, 10 outer iterations
+  n=  100 K=  32    0.223 s
+  n=  300 K=  16    1.087 s
+  n= 1000 K=   8    8.150 s

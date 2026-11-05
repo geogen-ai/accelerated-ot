@@ -1,0 +1,13 @@
+POT emd forced to numThreads=1
+mode=orig_pot1 numba_threads=1 (JIT compile excluded)
+LOPT embedding of K measures (targets have mass 0.6..1.0)
+  n=  100 K= 200    0.240 s
+  n=  300 K=  64    1.054 s
+  n= 1000 K=  16    7.908 s
+/home/bai195/projects/fused-pgw/lib/lib_lopt.py:152: UserWarning: numItermax reached before optimality. Try to increase numItermax.
+  result_code_string = check_result(result_code)
+  n= 2000 K=   4    7.901 s
+LOT barycenter, 10 outer iterations
+  n=  100 K=  32    0.342 s
+  n=  300 K=  16    0.901 s
+  n= 1000 K=   8   15.834 s
